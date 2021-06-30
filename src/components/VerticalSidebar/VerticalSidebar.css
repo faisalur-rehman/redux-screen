@@ -1,0 +1,17 @@
+.vertical-sidebar {
+  width: 5%;
+  padding: 10px 20px;
+  background-color: aliceblue;
+  text-align: center;
+}
+.vertical-sidebar p {
+  color: #1495ec;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+hr {
+  width: 42%;
+  background-color: #1495ec;
+  height: 1px;
+  border: 0;
+}

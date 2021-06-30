@@ -1,0 +1,15 @@
+.places-header {
+  width: 90%;
+  background-color: rgb(233, 233, 233);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;
+}
+.places-header i {
+  display: block;
+  color: #1495ec;
+  margin: 20px 35px;
+  font-size: 1.7rem;
+}

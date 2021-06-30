@@ -1,0 +1,12 @@
+.places {
+  width: 30%;
+  background-color: white;
+  box-shadow: 1px 0px 10px #888888;
+  max-height: 100vh;
+  overflow-y: scroll;
+}
+.alpha-order {
+  margin: 10px 30px;
+  font-size: 1.8rem;
+  color: blue;
+}
