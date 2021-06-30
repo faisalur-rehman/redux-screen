@@ -1,0 +1,17 @@
+.home {
+  width: 52%;
+  box-shadow: 1px 0px 10px #888888;
+}
+.home-panel,
+.map-panel,
+.schedule-panel {
+  height: 43vh;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.schedule-panel {
+  height: auto;
+  width: 20%;
+}

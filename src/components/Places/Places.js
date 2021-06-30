@@ -1,7 +1,7 @@
 import React from "react";
 import "./Places.css";
 import PlaceCard from "./PlaceCard/PlaceCard";
-import PlacesHeader from "./PlacesHeader";
+import PlacesHeader from "../PlacesHeader/PlacesHeader";
 import img from "../../assets/images/img1.jpg";
 const Places = () => {
   return (
