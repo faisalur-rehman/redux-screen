@@ -1,6 +1,6 @@
 .vertical-sidebar {
-  width: 5%;
-  padding: 10px 20px;
+  width: 7%;
+  padding: 10px;
   background-color: aliceblue;
   text-align: center;
 }
@@ -8,10 +8,12 @@
   color: #1495ec;
   font-size: 1.1rem;
   cursor: pointer;
+  padding: 15px 8px;
 }
 hr {
   width: 42%;
   background-color: #1495ec;
+  margin: auto;
   height: 1px;
   border: 0;
 }
