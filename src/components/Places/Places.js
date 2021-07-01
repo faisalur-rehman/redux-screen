@@ -56,7 +56,7 @@ const Places = () => {
             category={item.category}
             img={item.img}
           />
-          <PlaceModal show={placeModal} onHide={() => setPlaceModal(false)} />
+          {/* <PlaceModal show={placeModal} onHide={() => setPlaceModal(false)} /> */}
         </div>
       ))}
     </div>
