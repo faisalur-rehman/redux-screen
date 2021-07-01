@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./PlaceCard.css";
 import PlaceModal from "../../modals/PlaceModal";
+
 const PlaceCard = ({ name, category, rating, groups, distance, img }) => {
   const [placeModal, setPlaceModal] = useState(false);
 
@@ -30,7 +31,12 @@ const PlaceCard = ({ name, category, rating, groups, distance, img }) => {
           </p>
         </div>
       </div>
-      <PlaceModal show={placeModal} onHide={() => setPlaceModal(false)} />
+      <PlaceModal
+        show={placeModal}
+        onHide={() => setPlaceModal(false)}
+        name={name}
+        img={img}
+      />
     </>
   );
 };

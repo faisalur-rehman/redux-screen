@@ -3,7 +3,6 @@ import "./Places.css";
 import PlaceCard from "./PlaceCard/PlaceCard";
 import PlacesHeader from "../PlacesHeader/PlacesHeader";
 import img from "../../assets/images/img1.jpg";
-import PlaceModal from "../modals/PlaceModal";
 
 const Places = () => {
   const [placeModal, setPlaceModal] = useState(false);
@@ -56,7 +55,6 @@ const Places = () => {
             category={item.category}
             img={item.img}
           />
-          {/* <PlaceModal show={placeModal} onHide={() => setPlaceModal(false)} /> */}
         </div>
       ))}
     </div>
