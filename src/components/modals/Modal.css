@@ -1,0 +1,12 @@
+.modal p {
+  margin: 10px;
+}
+.register-here {
+  color: rgb(50, 141, 245);
+  text-align: center;
+  cursor: pointer;
+}
+.image img {
+  display: block;
+  margin: 10px auto;
+}
