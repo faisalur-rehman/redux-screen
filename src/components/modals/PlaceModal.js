@@ -3,7 +3,7 @@ import { Modal, Button, Form } from "react-bootstrap";
 import "./Modal.css";
 import img from "../../assets/images/img1.jpg";
 
-const LoginModal = (props) => {
+const PlaceModal = (props) => {
   return (
     <div className="modal">
       <Modal
@@ -13,6 +13,9 @@ const LoginModal = (props) => {
         centered
         style={{ padding: "50px" }}
       >
+        <Modal.Header closeButton>
+          <Modal.Title id="example-modal-sizes-title-sm">Places</Modal.Title>
+        </Modal.Header>
         <Modal.Body>
           <div className="image">
             <img
@@ -50,12 +53,12 @@ const LoginModal = (props) => {
           <p className="text-center forgot-password">Forgot Password?</p>
           <p className="register-here">Dont have an account?Register here</p>
         </Modal.Body>
-        {/* <Modal.Footer>
+        <Modal.Footer>
           <Button onClick={props.onHide}>Close</Button>
-        </Modal.Footer> */}
+        </Modal.Footer>
       </Modal>
     </div>
   );
 };
 
-export default LoginModal;
+export default PlaceModal;

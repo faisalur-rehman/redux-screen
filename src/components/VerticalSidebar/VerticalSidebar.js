@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import LoginModal from "../modals/LoginModal";
 import GroupModal from "../modals/GroupModal";
+import GuideInfo from "../modals/GuideInfo";
 import "./VerticalSidebar.css";
-import { Button } from "react-bootstrap";
 
 const VerticalSidebar = () => {
   const [loginModal, setLoginModal] = useState(false);
@@ -32,7 +32,7 @@ const VerticalSidebar = () => {
           <hr />
         </div>
         <div>
-          <p>Guide Info</p>
+          <p onClick={() => setGuideInfoModal(true)}>Guide Info</p>
           <hr />
         </div>
         <div>
@@ -54,6 +54,10 @@ const VerticalSidebar = () => {
       </div>
       <LoginModal show={loginModal} onHide={() => setLoginModal(false)} />
       <GroupModal show={groupModal} onHide={() => setGroupModal(false)} />
+      <GuideInfo
+        show={guideInfoModal}
+        onHide={() => setGuideInfoModal(false)}
+      />
     </>
   );
 };

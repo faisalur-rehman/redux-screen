@@ -26,6 +26,7 @@ const PlaceCard = ({ name, category, rating, groups, distance, img }) => {
           {distance}
         </p>
       </div>
+      {/* <PlaceModal show={placeModal} onHide={() => setPlaceModal(false)} /> */}
     </div>
   );
 };

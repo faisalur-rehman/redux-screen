@@ -45,7 +45,7 @@ const GroupModal = (props) => {
         <Modal.Header closeButton>
           <Modal.Title id="example-modal-sizes-title-sm">Groups</Modal.Title>
         </Modal.Header>
-        <Modal.Body closeButton>
+        <Modal.Body>
           {arr.map((item, index) => (
             <div className="group-card" key={index}>
               <div className="forth">
@@ -60,10 +60,6 @@ const GroupModal = (props) => {
             </div>
           ))}
         </Modal.Body>
-
-        {/* <Modal.Footer>
-          <Button onClick={props.onHide}>Close</Button>
-        </Modal.Footer> */}
       </Modal>
     </div>
   );

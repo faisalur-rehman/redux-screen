@@ -5,6 +5,7 @@
   width: 98%;
   margin: 10px auto;
   border-radius: 15px;
+  cursor: pointer;
 }
 .place-card div {
   margin: 10px;

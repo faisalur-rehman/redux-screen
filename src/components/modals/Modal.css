@@ -43,3 +43,7 @@
 .edit {
   color: blue;
 }
+.attribute {
+  color: rgb(0, 0, 255);
+  font-weight: 500;
+}
