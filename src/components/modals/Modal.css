@@ -10,3 +10,36 @@
   display: block;
   margin: 10px auto;
 }
+.group-card {
+  box-shadow: 1px 0px 10px #888888;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
+}
+.forth,
+.back {
+  width: 40%;
+  display: flex;
+  align-items: center;
+}
+.back {
+  justify-content: center;
+}
+.group-card i {
+  padding: 10px;
+}
+.group-card p {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.walk {
+  color: rgb(165, 221, 34);
+}
+.delete {
+  color: red;
+}
+.edit {
+  color: blue;
+}

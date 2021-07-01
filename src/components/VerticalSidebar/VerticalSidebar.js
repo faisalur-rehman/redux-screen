@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import LoginModal from "../modals/LoginModal";
+import GroupModal from "../modals/GroupModal";
 import "./VerticalSidebar.css";
 import { Button } from "react-bootstrap";
 
@@ -27,7 +28,7 @@ const VerticalSidebar = () => {
           <hr />
         </div>
         <div>
-          <p>Groups</p>
+          <p onClick={() => setGroupModal(true)}>Groups</p>
           <hr />
         </div>
         <div>
@@ -52,6 +53,7 @@ const VerticalSidebar = () => {
         </div>
       </div>
       <LoginModal show={loginModal} onHide={() => setLoginModal(false)} />
+      <GroupModal show={groupModal} onHide={() => setGroupModal(false)} />
     </>
   );
 };
