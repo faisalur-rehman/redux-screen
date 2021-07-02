@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { Modal } from "react-bootstrap";
 import "./Modal.css";
 import { Form } from "react-bootstrap";
 
 const MultiSelectModal = (props) => {
   //   const [editPlaceModal, setEditPlaceModal] = useState(false);
-  let arr = [
+  const [arr, setArr] = useState([
     {
       icon: <i class="fab fa-creative-commons"></i>,
       country: "Afghanistan",
@@ -21,7 +21,8 @@ const MultiSelectModal = (props) => {
       country: "Austrailia",
       checked: false,
     },
-  ];
+  ]);
+  console.log(arr);
   return (
     <div className="modal">
       <Modal
@@ -48,7 +49,14 @@ const MultiSelectModal = (props) => {
                 {item.icon}
                 <p>{item.country}</p>
               </div>
-              <Form.Check type="checkbox" id="autoSizingCheck2" />
+              <Form.Check
+                type="checkbox"
+                id="autoSizingCheck2"
+                checked={item.checked}
+                onChange={() =>
+                  setArr((prev) => [...prev, { ...item, checked: true }])
+                }
+              />
             </div>
           ))}
         </Modal.Body>

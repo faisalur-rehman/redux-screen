@@ -11,6 +11,9 @@
   justify-content: center;
   align-items: center;
 }
+.home-panel {
+  height: 100vh;
+}
 .schedule-panel {
   height: auto;
   width: 20%;
