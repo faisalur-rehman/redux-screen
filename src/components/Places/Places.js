@@ -5,7 +5,7 @@ import PlacesHeader from "../PlacesHeader/PlacesHeader";
 import img from "../../assets/images/img1.jpg";
 
 const Places = () => {
-  const [placeModal, setPlaceModal] = useState(false);
+  const [, setPlaceModal] = useState(false);
   let arr = [
     {
       name: "#RAW",
@@ -40,7 +40,6 @@ const Places = () => {
       img: img,
     },
   ];
-  console.log(placeModal);
   return (
     <div className="places">
       <PlacesHeader />

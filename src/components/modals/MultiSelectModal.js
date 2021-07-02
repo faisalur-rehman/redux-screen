@@ -2,27 +2,26 @@ import React, { useState } from "react";
 import { Modal } from "react-bootstrap";
 import "./Modal.css";
 import { Form } from "react-bootstrap";
+import store from "../../store/store";
+import { selectOne, selectAll } from "../../store/reducer";
+import { useDispatch } from "react-redux";
 
 const MultiSelectModal = (props) => {
-  //   const [editPlaceModal, setEditPlaceModal] = useState(false);
-  const [arr, setArr] = useState([
-    {
-      icon: <i class="fab fa-creative-commons"></i>,
-      country: "Afghanistan",
-      checked: false,
-    },
-    {
-      icon: <i class="fab fa-creative-commons"></i>,
-      country: "Albania",
-      checked: false,
-    },
-    {
-      icon: <i class="fab fa-creative-commons"></i>,
-      country: "Austrailia",
-      checked: false,
-    },
-  ]);
-  console.log(arr);
+  const [show, setShow] = useState(true);
+  const [, setRerender] = useState("");
+  const dispatch = useDispatch();
+
+  function handleChange(i) {
+    setRerender(Math.random() * 100000);
+
+    dispatch(selectOne({ index: i }));
+    console.log("store", store.getState());
+  }
+  function handleSelectAll() {
+    setShow(!show);
+    dispatch(selectAll({ show }));
+  }
+
   return (
     <div className="modal">
       <Modal
@@ -41,21 +40,22 @@ const MultiSelectModal = (props) => {
             <Form.Group controlId="formGroupEmail">
               <Form.Control placeholder="Search" />
             </Form.Group>
-            <i className="fas fa-tasks"></i>
+            <i
+              className={`fas fa-tasks ${show ? "" : "color"}`}
+              onClick={handleSelectAll}
+            ></i>
           </div>
-          {arr.map((item, index) => (
+          {store.getState().map((item, index) => (
             <div className="country-card" key={index}>
               <div className="country">
-                {item.icon}
+                {/* {item.icon} */}
                 <p>{item.country}</p>
               </div>
               <Form.Check
                 type="checkbox"
                 id="autoSizingCheck2"
                 checked={item.checked}
-                onChange={() =>
-                  setArr((prev) => [...prev, { ...item, checked: true }])
-                }
+                onChange={() => handleChange(index)}
               />
             </div>
           ))}

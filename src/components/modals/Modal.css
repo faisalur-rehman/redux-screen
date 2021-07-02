@@ -65,10 +65,12 @@
   align-items: center;
 }
 .search i {
-  color: blue;
   font-size: 1.7rem;
   margin-bottom: 20px;
   margin-left: 20px;
+}
+.color {
+  color: blue;
 }
 .country-card {
   display: flex;
