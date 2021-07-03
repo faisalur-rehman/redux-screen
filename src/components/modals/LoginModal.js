@@ -25,21 +25,31 @@ const LoginModal = (props) => {
           </div>
           <h4 className="text-center">Login</h4>
           <Form style={{ width: "60%", margin: "auto" }}>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Label>Email address</Form.Label>
-              <Form.Control type="email" placeholder="Enter email" />
-            </Form.Group>
-
-            <Form.Group className="mb-3" controlId="formBasicPassword">
-              <Form.Label>Password</Form.Label>
-              <Form.Control
-                type="password"
-                placeholder="Password"
-                // style={{ width: "50%", margin: "auto" }}
+            <div class="form-floating mb-3">
+              <input
+                type="email"
+                class="form-control"
+                id="floatingInput"
+                placeholder="name@example.com"
               />
-            </Form.Group>
+              <label for="floatingInput">Email address</label>
+            </div>
+            <div class="form-floating">
+              <input
+                type="password"
+                class="form-control"
+                id="floatingPassword"
+                placeholder="Password"
+              />
+              <label for="floatingPassword">Password</label>
+            </div>
 
-            <Button variant="primary" type="submit" style={{ width: "100%" }}>
+            <Button
+              variant="primary"
+              type="submit"
+              style={{ width: "100%" }}
+              className="my-2"
+            >
               Login
             </Button>
             <p className="text-center">Or</p>
