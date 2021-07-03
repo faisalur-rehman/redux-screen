@@ -20,6 +20,7 @@ const Home = ({ setDisplayNone }) => {
     } else {
       setDisplayNone(false);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [height]);
 
   return (
