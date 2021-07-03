@@ -1,16 +1,19 @@
 import React from "react";
 import "../HomeHeader/HomeHeader.css";
+import { Link } from "react-router-dom";
 
 const HomeFooter = () => {
   return (
     <div className="home-header home-footer">
-      <div
-        className="home-nav-item"
-        style={{ color: "blue", verticalAlign: "middle" }}
-      >
-        <i className="fas fa-home"></i>
-        <p>Home</p>
-      </div>
+      <Link to="/">
+        <div
+          className="home-nav-item"
+          style={{ color: "blue", verticalAlign: "middle" }}
+        >
+          <i className="fas fa-home"></i>
+          <p>Home</p>
+        </div>
+      </Link>
       <div
         className="home-nav-item"
         style={{ color: "green", verticalAlign: "middle" }}
@@ -19,13 +22,15 @@ const HomeFooter = () => {
         <p>User</p>
       </div>
 
-      <div
-        className="home-nav-item"
-        style={{ color: "#FCD702", verticalAlign: "middle" }}
-      >
-        <i className="fas fa-edit"></i>
-        <p>Places</p>
-      </div>
+      <Link to="/places">
+        <div
+          className="home-nav-item"
+          style={{ color: "#FCD702", verticalAlign: "middle" }}
+        >
+          <i className="fas fa-edit"></i>
+          <p>Places</p>
+        </div>
+      </Link>
       <div
         className="home-nav-item "
         style={{ color: "lightblue", verticalAlign: "middle" }}

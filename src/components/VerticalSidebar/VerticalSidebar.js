@@ -43,14 +43,6 @@ const VerticalSidebar = () => {
           <p>Copy Guide</p>
           <hr />
         </div>
-        <div>
-          <p>Chapters</p>
-          <hr />
-        </div>
-        <div>
-          <p>Upload Images</p>
-          <hr />
-        </div>
       </div>
       <LoginModal show={loginModal} onHide={() => setLoginModal(false)} />
       <GroupModal show={groupModal} onHide={() => setGroupModal(false)} />

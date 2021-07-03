@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60%;
+  width: 90%;
   margin: 10px auto;
   padding: 10px;
   box-shadow: 1px 0px 10px #888888;
@@ -17,16 +17,18 @@
   display: none;
 }
 @media screen and (max-width: 968px) {
+  .none {
+    display: none !important;
+  }
   .home-header,
-  .home {
-    width: 90% !important;
+  .home,
+  .places {
+    width: 100% !important;
     box-shadow: none;
+    margin: auto;
   }
   .home-item,
-  .ticket-item,
-  .vertical-sidebar,
-  .places,
-  .schedule-panel {
+  .ticket-item {
     display: none !important;
   }
   .home-footer {

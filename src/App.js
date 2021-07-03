@@ -10,10 +10,13 @@ function App() {
   return (
     <div className="app">
       <Provider store={store}>
-        <VerticalSidebar />
-        <Places />
+        <div className="none">
+          <VerticalSidebar />
+          <Places />
+        </div>
         <Home />
-        <div className="schedule-panel">
+
+        <div className="schedule-panel none">
           <h1>Schedule Panel</h1>
         </div>
       </Provider>

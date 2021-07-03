@@ -6,3 +6,6 @@
 .app {
   display: flex;
 }
+.none {
+  display: flex;
+}
