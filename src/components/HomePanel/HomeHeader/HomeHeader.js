@@ -5,7 +5,7 @@ const HomeHeader = () => {
   return (
     <div className="home-header">
       <div
-        className="home-nav-item"
+        className="home-nav-item home-item"
         style={{ color: "blue", verticalAlign: "middle" }}
       >
         <i className="fas fa-home"></i>
@@ -40,7 +40,7 @@ const HomeHeader = () => {
         <p>Save</p>
       </div>
       <div
-        className="home-nav-item"
+        className="home-nav-item ticket-item"
         style={{ color: "lightblue", verticalAlign: "middle" }}
       >
         <i className="fas fa-clipboard-list"></i>

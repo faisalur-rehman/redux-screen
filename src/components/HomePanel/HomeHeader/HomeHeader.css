@@ -13,3 +13,23 @@
   flex-direction: column;
   align-items: center;
 }
+.home-footer {
+  display: none;
+}
+@media screen and (max-width: 968px) {
+  .home-header,
+  .home {
+    width: 90% !important;
+    box-shadow: none;
+  }
+  .home-item,
+  .ticket-item,
+  .vertical-sidebar,
+  .places,
+  .schedule-panel {
+    display: none !important;
+  }
+  .home-footer {
+    display: flex;
+  }
+}

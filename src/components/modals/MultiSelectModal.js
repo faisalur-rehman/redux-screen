@@ -48,7 +48,7 @@ const MultiSelectModal = (props) => {
           {store.getState().map((item, index) => (
             <div className="country-card" key={index}>
               <div className="country">
-                {/* {item.icon} */}
+                {item.icon}
                 <p>{item.country}</p>
               </div>
               <Form.Check

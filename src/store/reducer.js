@@ -4,17 +4,17 @@ const slice1 = createSlice({
   name: "sections",
   initialState: [
     {
-      // icon: <i className="fab fa-creative-commons"></i>,
+      icon: <i className="fab fa-creative-commons"></i>,
       country: "Afghanistan",
       checked: false,
     },
     {
-      // icon: <i className="fab fa-creative-commons"></i>,
+      icon: <i className="fab fa-creative-commons"></i>,
       country: "Albania",
       checked: false,
     },
     {
-      // icon: <i className="fab fa-creative-commons"></i>,
+      icon: <i className="fab fa-creative-commons"></i>,
       country: "Austrailia",
       checked: false,
     },

@@ -2,6 +2,7 @@ import React from "react";
 import HomeHeader from "../HomeHeader/HomeHeader";
 import "./Home.css";
 import ResizePanel from "react-resize-panel";
+import HomeFooter from "../HomeFooter/HomeFooter";
 
 class Home extends React.Component {
   state = {
@@ -28,6 +29,7 @@ class Home extends React.Component {
         <div className="map-panel">
           <h1>Map Panel</h1>
         </div>
+        <HomeFooter />
       </div>
       // <ResizePanel direction="e">
       //   <div className="panel sidebar" style={{ width: "100%" }}>
