@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import VerticalSidebar from "./components/VerticalSidebar/VerticalSidebar";
 import Places from "./components/Places/Places";
@@ -7,18 +7,23 @@ import store from "./store/store";
 import { Provider } from "react-redux";
 
 function App() {
+  const [displayNone, setDisplayNone] = useState(false);
   return (
     <div className="app">
       <Provider store={store}>
-        <div className="none">
-          <VerticalSidebar />
-          <Places />
-        </div>
-        <Home />
+        {!displayNone && (
+          <div className="none">
+            <VerticalSidebar />
+            <Places />
+          </div>
+        )}
+        <Home setDisplayNone={setDisplayNone} />
 
-        <div className="schedule-panel none">
-          <h1>Schedule Panel</h1>
-        </div>
+        {!displayNone && (
+          <div className="schedule-panel none">
+            <h1>Schedule Panel</h1>
+          </div>
+        )}
       </Provider>
     </div>
   );

@@ -46,14 +46,13 @@ const LoginModal = (props) => {
 
             <Button
               variant="primary"
-              type="submit"
               style={{ width: "100%" }}
               className="my-2"
             >
               Login
             </Button>
             <p className="text-center">Or</p>
-            <Button variant="primary" type="submit" style={{ width: "100%" }}>
+            <Button variant="primary" style={{ width: "100%" }}>
               Login with Facebook
             </Button>
           </Form>
