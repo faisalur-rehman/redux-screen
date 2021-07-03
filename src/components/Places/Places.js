@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Places.css";
 import PlaceCard from "./PlaceCard/PlaceCard";
 import PlacesHeader from "../PlacesHeader/PlacesHeader";
 import img from "../../assets/images/img1.jpg";
 
 const Places = () => {
-  const [, setPlaceModal] = useState(false);
   let arr = [
     {
       name: "#RAW",
@@ -45,7 +44,7 @@ const Places = () => {
       <PlacesHeader />
       <p className="alpha-order">#</p>
       {arr.map((item, index) => (
-        <div key={index} onClick={() => setPlaceModal(true)}>
+        <div key={index}>
           <PlaceCard
             name={item.name}
             rating={item.rating}
@@ -53,6 +52,7 @@ const Places = () => {
             distance={item.distance}
             category={item.category}
             img={item.img}
+            i={index}
           />
         </div>
       ))}

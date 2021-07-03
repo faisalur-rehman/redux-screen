@@ -113,6 +113,7 @@ const EditPlaceModal = (props) => {
       <MultiSelectModal
         show={multiSelect}
         onHide={() => setMultiSelect(false)}
+        index={props.index}
       />
     </>
   );

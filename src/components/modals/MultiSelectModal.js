@@ -14,12 +14,12 @@ const MultiSelectModal = (props) => {
   function handleChange(i) {
     setRerender(Math.random() * 100000);
 
-    dispatch(selectOne({ index: i }));
+    dispatch(selectOne({ id: props.index, index: i }));
     console.log("store", store.getState());
   }
-  function handleSelectAll() {
+  function handleSelectAll(i) {
     setShow(!show);
-    dispatch(selectAll({ show }));
+    dispatch(selectAll({ show, id: props.index }));
   }
 
   return (
@@ -45,16 +45,16 @@ const MultiSelectModal = (props) => {
               onClick={handleSelectAll}
             ></i>
           </div>
-          {store.getState().map((item, index) => (
+          {store.getState()[props.index].detail.map((element, index) => (
             <div className="country-card" key={index}>
               <div className="country">
-                {item.icon}
-                <p>{item.country}</p>
+                {element.icon}
+                <p>{element.country}</p>
               </div>
               <Form.Check
                 type="checkbox"
                 id="autoSizingCheck2"
-                checked={item.checked}
+                checked={element.checked}
                 onChange={() => handleChange(index)}
               />
             </div>

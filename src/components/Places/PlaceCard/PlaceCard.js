@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./PlaceCard.css";
 import PlaceModal from "../../modals/PlaceModal";
 
-const PlaceCard = ({ name, category, rating, groups, distance, img }) => {
+const PlaceCard = ({ name, category, rating, groups, distance, img, i }) => {
   const [placeModal, setPlaceModal] = useState(false);
 
   return (
@@ -36,6 +36,7 @@ const PlaceCard = ({ name, category, rating, groups, distance, img }) => {
         onHide={() => setPlaceModal(false)}
         name={name}
         img={img}
+        i={i}
       />
     </>
   );

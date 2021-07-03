@@ -50,6 +50,7 @@ const PlaceModal = (props) => {
         onHide={() => setEditPlaceModal(false)}
         img={props.img}
         name={props.name}
+        index={props.i}
       />
     </>
   );
