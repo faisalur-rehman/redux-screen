@@ -19,11 +19,12 @@ const Places = () => {
         return a.name > b.name ? 1 : b.name > a.name ? -1 : 0;
       });
     setPlaces([...arr]);
+    console.log("store", store.getState());
   }, []);
+  // console.log("places", places);
 
-  console.log("searchedPlace", index);
-  places && console.log("Places", places);
-  console.log(store.getState());
+  // console.log("searchedPlace", index);
+  places.length > 0 && console.log("Places", places);
   // console.log("found", found);
 
   function handleSearchCancel() {

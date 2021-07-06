@@ -19,5 +19,6 @@
   border-radius: 15px;
 }
 .place-card p {
-  margin: 4px;
+  margin: 2px 4px;
+  font-size: 0.8rem;
 }

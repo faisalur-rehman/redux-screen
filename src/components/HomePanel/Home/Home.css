@@ -18,7 +18,7 @@
   height: 100vh;
 }
 .map-panel {
-  height: calc(100vh - var(--height));
+  height: calc(86vh - var(--height));
 }
 .schedule-panel {
   height: auto;

@@ -12,7 +12,7 @@ const PlaceCard = ({ name, category, rating, groups, distance, img, i }) => {
           <img src={img} alt="" />
         </div>
         <div>
-          <h3>{name}</h3>
+          <h4>{name}</h4>
           <p>
             <span>Category: </span>
             {category}
