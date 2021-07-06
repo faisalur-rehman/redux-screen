@@ -8,6 +8,8 @@ const Places = () => {
   const [search, setSearch] = useState(false);
   const [searchedPlace, setSearchedPlace] = useState("");
   const [places, setPlaces] = useState([]);
+  const [found, setFound] = useState();
+  const [index, setIndex] = useState();
 
   useEffect(() => {
     let arr = store
@@ -16,18 +18,33 @@ const Places = () => {
       .sort(function (a, b) {
         return a.name > b.name ? 1 : b.name > a.name ? -1 : 0;
       });
-    setPlaces(arr);
+    setPlaces([...arr]);
   }, []);
 
-  console.log("searchedPlace", places);
+  console.log("searchedPlace", index);
+  // console.log("found", found);
 
   function handleSearchCancel() {
     setSearch(false);
     setSearchedPlace("");
+    setFound();
   }
 
   function handleSubmit(e) {
     e.preventDefault();
+    let result = places.find(
+      (element) =>
+        element.name.toLowerCase() === searchedPlace.toLocaleLowerCase()
+    );
+    setFound(result);
+    for (let i = 0; i < places.length; i++) {
+      console.log(found);
+
+      if (JSON.stringify(store.getState()[i]) === JSON.stringify(result)) {
+        console.log(1);
+        setIndex(i);
+      }
+    }
   }
 
   return (
@@ -44,24 +61,36 @@ const Places = () => {
             value={searchedPlace}
             onChange={({ target }) => setSearchedPlace(target.value)}
           />
-          <i class="fas fa-times" onClick={handleSearchCancel}></i>
+          <i className="fas fa-times" onClick={handleSearchCancel}></i>
         </form>
       )}
       <p className="alpha-order">#</p>
-      {places.length > 0 &&
-        places.map((item, index) => (
-          <div key={index}>
+      {!found
+        ? places.length > 0 &&
+          places.map((item, index) => (
+            <div key={index}>
+              <PlaceCard
+                name={item.name}
+                rating={item.rating}
+                groups={item.groups}
+                distance={item.distance}
+                category={item.category}
+                img={item.img}
+                i={index}
+              />
+            </div>
+          ))
+        : found && (
             <PlaceCard
-              name={item.name}
-              rating={item.rating}
-              groups={item.groups}
-              distance={item.distance}
-              category={item.category}
-              img={item.img}
+              name={found.name}
+              rating={found.rating}
+              groups={found.groups}
+              distance={found.distance}
+              category={found.category}
+              img={found.img}
               i={index}
             />
-          </div>
-        ))}
+          )}
     </div>
   );
 };
