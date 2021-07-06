@@ -17,6 +17,7 @@
   align-items: center;
   padding: 10px;
   margin: 10px;
+  border-radius: 20px;
 }
 .forth,
 .back {
@@ -25,7 +26,7 @@
   align-items: center;
 }
 .back {
-  justify-content: center;
+  justify-content: flex-end;
 }
 .group-card i {
   padding: 10px;

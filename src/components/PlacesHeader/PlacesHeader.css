@@ -6,10 +6,13 @@
   justify-content: center;
   align-items: center;
   margin: 10px auto;
+  /* margin-left: 5px; */
 }
 .places-header i {
   display: block;
   color: #1495ec;
   margin: 20px 30px;
   font-size: 1.7rem;
+}
+@media screen and (max-width: 900px) {
 }

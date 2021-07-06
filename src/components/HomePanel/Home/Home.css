@@ -1,3 +1,6 @@
+:root {
+  --height: 40vh;
+}
 .home {
   width: 52%;
   box-shadow: 1px 0px 10px #888888;
@@ -5,7 +8,7 @@
 .home-panel,
 .map-panel,
 .schedule-panel {
-  height: 43vh;
+  min-height: var(--height);
   border: 1px solid black;
   display: flex;
   justify-content: center;
@@ -14,7 +17,15 @@
 .home-panel {
   height: 100vh;
 }
+.map-panel {
+  height: calc(100vh - var(--height));
+}
 .schedule-panel {
   height: auto;
   width: 20%;
+}
+@media screen and (max-width: 968px) {
+  .home-panel {
+    height: 70vh;
+  }
 }

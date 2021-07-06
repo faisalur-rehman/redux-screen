@@ -30,3 +30,7 @@
 ::-webkit-scrollbar-thumb:hover {
   background: lightblue;
 }
+/* .sticky-place-header {
+  position: fixed;
+  top: 0;
+} */

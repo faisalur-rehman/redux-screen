@@ -7,7 +7,9 @@ import store from "../../store/store";
 const Places = () => {
   return (
     <div className="places">
-      <PlacesHeader />
+      <div className="sticky-place-header">
+        <PlacesHeader />
+      </div>
       <p className="alpha-order">#</p>
       {store.getState().map((item, index) => (
         <div key={index}>
