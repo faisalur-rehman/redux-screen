@@ -22,6 +22,8 @@ const Places = () => {
   }, []);
 
   console.log("searchedPlace", index);
+  places && console.log("Places", places);
+  console.log(store.getState());
   // console.log("found", found);
 
   function handleSearchCancel() {
@@ -38,10 +40,8 @@ const Places = () => {
     );
     setFound(result);
     for (let i = 0; i < places.length; i++) {
-      console.log(found);
-
       if (JSON.stringify(store.getState()[i]) === JSON.stringify(result)) {
-        console.log(1);
+        console.log("i", i);
         setIndex(i);
       }
     }

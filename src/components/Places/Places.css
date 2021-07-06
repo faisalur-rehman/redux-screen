@@ -30,13 +30,8 @@
 ::-webkit-scrollbar-thumb:hover {
   background: lightblue;
 }
-/* .sticky-place-header {
-  position: fixed;
-  top: 0;
-} */
 .search {
   width: 85%;
-  /* margin: auto; */
   padding: 8px 10px;
   border-radius: 8px;
 }
@@ -50,4 +45,10 @@ i {
 }
 .places form i {
   margin-left: 10px;
+}
+.sticky-place-header {
+  margin: auto;
+  position: fixed;
+  top: 0;
+  margin-left: 20px;
 }

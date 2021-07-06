@@ -11,11 +11,11 @@ const MultiSelectModal = (props) => {
   const [, setRerender] = useState("");
   const dispatch = useDispatch();
 
+  console.log("store", store.getState());
   function handleChange(i) {
     setRerender(Math.random() * 100000);
 
     dispatch(selectOne({ id: props.index, index: i }));
-    console.log("store", store.getState());
   }
   function handleSelectAll(i) {
     setShow(!show);
