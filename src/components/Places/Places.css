@@ -34,3 +34,20 @@
   position: fixed;
   top: 0;
 } */
+.search {
+  width: 85%;
+  /* margin: auto; */
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+.places form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+i {
+  cursor: pointer;
+}
+.places form i {
+  margin-left: 10px;
+}

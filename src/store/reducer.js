@@ -5,7 +5,7 @@ const slice1 = createSlice({
   name: "sections",
   initialState: [
     {
-      name: "RAW",
+      name: "RA",
       rating: 4.4,
       groups: "Restaurants, Caltaro",
       distance: "24 KM",
@@ -95,7 +95,7 @@ const slice1 = createSlice({
       ],
     },
     {
-      name: "#RAW",
+      name: "B",
       rating: 4.4,
       groups: "Restaurants, Caltaro",
       distance: "24 KM",
