@@ -1,12 +1,10 @@
 .places-header {
-  /* width: 90%; */
   background-color: rgb(233, 233, 233);
   border-radius: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: auto;
-  /* margin: 10px auto; */
 }
 .places-header i {
   display: block;
