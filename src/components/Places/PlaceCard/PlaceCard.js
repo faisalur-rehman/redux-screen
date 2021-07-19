@@ -27,7 +27,7 @@ const PlaceCard = (props) => {
           </p>
           <p>
             <span>Distance: </span>
-            {props.distance}
+            {props.distance}KM
           </p>
         </div>
       </div>

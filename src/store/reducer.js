@@ -8,7 +8,7 @@ const slice1 = createSlice({
       name: "RA",
       rating: 4.4,
       groups: "Restaurants, Caltaro",
-      distance: "24 KM",
+      distance: 24,
       category: "Rest, Vegan",
       img: img,
       detail: [
@@ -38,7 +38,7 @@ const slice1 = createSlice({
       name: "AB",
       rating: 4.4,
       groups: "Restaurants, Caltaro",
-      distance: "4 KM",
+      distance: 4,
       category: " Vegan",
       img: img,
       detail: [
@@ -68,7 +68,7 @@ const slice1 = createSlice({
       name: "W",
       rating: 4,
       groups: "Restaurants",
-      distance: "24",
+      distance: 243,
       category: "Rest",
       img: img,
       detail: [
@@ -98,7 +98,7 @@ const slice1 = createSlice({
       name: "B",
       rating: 4.4,
       groups: "Restaurants, Caltaro",
-      distance: "24 KM",
+      distance: 43,
       category: "Rest, Vegan",
       img: img,
       detail: [

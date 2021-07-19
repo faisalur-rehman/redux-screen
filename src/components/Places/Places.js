@@ -20,15 +20,15 @@ const Places = () => {
 
   function handleSortSubmit(sort) {
     setSortBy(sort);
-    if (sort === "name") {
-      let arr = store
-        .getState()
-        .slice()
-        .sort(function (a, b) {
-          return a.name > b.name ? 1 : b.name > a.name ? -1 : 0;
-        });
-      setPlaces([...arr]);
-    }
+    // if (sort === "name") {
+    let arr = store
+      .getState()
+      .slice()
+      .sort(function (a, b) {
+        return a[sort] > b[sort] ? 1 : b[sort] > a[sort] ? -1 : 0;
+      });
+    setPlaces([...arr]);
+    // }
   }
   console.log("sort", sortBy);
 
