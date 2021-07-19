@@ -3,24 +3,22 @@ import { Modal } from "react-bootstrap";
 import "./Modal.css";
 import { Form } from "react-bootstrap";
 import store from "../../store/store";
-import { selectOne, selectAll } from "../../store/reducer";
+import { selectOne } from "../../store/reducer";
 import { useDispatch } from "react-redux";
 
 const MultiSelectModal = (props) => {
-  const [show, setShow] = useState(true);
+  const [show] = useState(true);
   const [, setRerender] = useState("");
   const dispatch = useDispatch();
 
-  // console.log("store", store.getState());
-  function handleChange(i) {
+  function handleChange(mainIndex, i) {
     setRerender(Math.random() * 100000);
-
-    dispatch(selectOne({ id: props.index, index: i }));
+    dispatch(selectOne({ id: props.index, checkedIndex: i, mainIndex }));
   }
-  function handleSelectAll(i) {
-    setShow(!show);
-    dispatch(selectAll({ show, id: props.index }));
-  }
+  // function handleSelectAll(i) {
+  //   setShow(!show);
+  //   dispatch(selectAll({ show, id: props.index }));
+  // }
 
   return (
     <div className="modal">
@@ -42,13 +40,12 @@ const MultiSelectModal = (props) => {
             </Form.Group>
             <i
               className={`fas fa-tasks ${show ? "" : "color"}`}
-              onClick={handleSelectAll}
+              // onClick={handleSelectAll}
             ></i>
           </div>
-          {store
-            .getState()
-            [props.mainIndex].places[props.index].detail.map(
-              (element, index) => (
+          {store.getState()[props.mainIndex].places[props.index].detail.map(
+            (element, index) =>
+              element.checked && (
                 <div className="country-card" key={index}>
                   <div className="country">
                     {element.icon}
@@ -58,11 +55,11 @@ const MultiSelectModal = (props) => {
                     type="checkbox"
                     id="autoSizingCheck2"
                     checked={element.checked}
-                    onChange={() => handleChange(index)}
+                    onChange={() => handleChange(props.mainIndex, index)}
                   />
                 </div>
               )
-            )}
+          )}
         </Modal.Body>
       </Modal>
     </div>

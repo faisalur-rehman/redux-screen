@@ -93,7 +93,7 @@ const slice1 = createSlice({
             {
               icon: <i className="fab fa-creative-commons"></i>,
               country: "Albania",
-              checked: false,
+              checked: true,
             },
             {
               icon: <i className="fab fa-creative-commons"></i>,
@@ -118,17 +118,12 @@ const slice1 = createSlice({
             {
               icon: <i className="fab fa-creative-commons"></i>,
               country: "Afghanistan",
-              checked: false,
+              checked: true,
             },
             {
               icon: <i className="fab fa-creative-commons"></i>,
               country: "Austria",
               checked: true,
-            },
-            {
-              icon: <i className="fab fa-creative-commons"></i>,
-              country: "Albania",
-              checked: false,
             },
             {
               icon: <i className="fab fa-creative-commons"></i>,
@@ -143,10 +138,13 @@ const slice1 = createSlice({
 
   reducers: {
     selectOne: (state, action) => {
-      let id = action.payload.id;
-      let index = action.payload.index;
-      console.log("action", state[index]);
-      state[id].detail[index].checked = !state[id].detail[index].checked;
+      let { id, checkedIndex, mainIndex } = action.payload;
+
+      // console.log("action", state[index]);
+      state[mainIndex].places[id].detail[checkedIndex].checked =
+        !state[mainIndex].places[id].detail[checkedIndex].checked;
+
+      // state[id].detail[index].checked = !state[id].detail[index].checked;
       return state;
     },
     selectAll: (state, action) => {
