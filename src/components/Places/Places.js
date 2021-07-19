@@ -10,19 +10,27 @@ const Places = () => {
   const [places, setPlaces] = useState([]);
   const [found, setFound] = useState();
   const [index, setIndex] = useState();
+  const [sortBy, setSortBy] = useState("");
 
   useEffect(() => {
-    let arr = store
-      .getState()
-      .slice()
-      .sort(function (a, b) {
-        return a.name > b.name ? 1 : b.name > a.name ? -1 : 0;
-      });
-    setPlaces([...arr]);
+    setPlaces(store.getState());
     console.log("store", store.getState());
   }, []);
   places.length > 0 && console.log("Places", places);
-  // console.log("found", found);
+
+  function handleSortSubmit(sort) {
+    setSortBy(sort);
+    if (sort === "name") {
+      let arr = store
+        .getState()
+        .slice()
+        .sort(function (a, b) {
+          return a.name > b.name ? 1 : b.name > a.name ? -1 : 0;
+        });
+      setPlaces([...arr]);
+    }
+  }
+  console.log("sort", sortBy);
 
   function handleSearchCancel() {
     setSearch(false);
@@ -44,11 +52,13 @@ const Places = () => {
       }
     }
   }
-
   return (
     <div className="places">
       <div className="sticky-header">
-        <PlacesHeader setSearch={setSearch} />
+        <PlacesHeader
+          setSearch={setSearch}
+          handleSortSubmit={handleSortSubmit}
+        />
       </div>
       {search && (
         <form onSubmit={handleSubmit}>

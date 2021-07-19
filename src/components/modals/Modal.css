@@ -95,3 +95,13 @@
 .country p {
   font-weight: 500px;
 }
+.sort {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sort p {
+  font-weight: bold;
+  cursor: pointer;
+}
