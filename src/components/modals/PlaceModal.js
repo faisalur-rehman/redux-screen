@@ -51,6 +51,7 @@ const PlaceModal = (props) => {
         img={props.img}
         name={props.name}
         index={props.i}
+        mainIndex={props.mainIndex}
       />
     </>
   );

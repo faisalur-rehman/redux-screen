@@ -37,6 +37,7 @@ const PlaceCard = (props) => {
         name={props.name}
         img={props.img}
         i={props.i}
+        mainIndex={props.mainIndex}
       />
     </>
   );

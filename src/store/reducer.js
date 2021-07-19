@@ -5,126 +5,264 @@ const slice1 = createSlice({
   name: "sections",
   initialState: [
     {
-      name: "RA",
-      rating: 4.4,
-      groups: "Restaurants, Caltaro",
-      distance: 24,
-      category: "Rest, Vegan",
-      img: img,
-      detail: [
+      section: "A",
+      places: [
         {
-          icon: <i className="fab fa-creative-commons"></i>,
-          country: "Afghanistan",
-          checked: false,
+          name: "AB",
+          rating: 4.4,
+          groups: "Restaurants, Caltaro",
+          distance: 4,
+          category: " Vegan",
+          img: img,
+          detail: [
+            {
+              icon: <i className="fab fa-creative-commons"></i>,
+              country: "Afghanistan",
+              checked: false,
+            },
+            {
+              icon: <i className="fab fa-creative-commons"></i>,
+              country: "Austria",
+              checked: false,
+            },
+            {
+              icon: <i className="fab fa-creative-commons"></i>,
+              country: "Albania",
+              checked: false,
+            },
+            {
+              icon: <i className="fab fa-creative-commons"></i>,
+              country: "Austrailia",
+              checked: false,
+            },
+          ],
         },
         {
-          icon: <i className="fab fa-creative-commons"></i>,
-          country: "Austria",
-          checked: false,
-        },
-        {
-          icon: <i className="fab fa-creative-commons"></i>,
-          country: "Albania",
-          checked: false,
-        },
-        {
-          icon: <i className="fab fa-creative-commons"></i>,
-          country: "Austrailia",
-          checked: false,
-        },
-      ],
-    },
-    {
-      name: "AB",
-      rating: 4.4,
-      groups: "Restaurants, Caltaro",
-      distance: 4,
-      category: " Vegan",
-      img: img,
-      detail: [
-        {
-          icon: <i className="fab fa-creative-commons"></i>,
-          country: "Afghanistan",
-          checked: false,
-        },
-        {
-          icon: <i className="fab fa-creative-commons"></i>,
-          country: "Austria",
-          checked: false,
-        },
-        {
-          icon: <i className="fab fa-creative-commons"></i>,
-          country: "Albania",
-          checked: false,
-        },
-        {
-          icon: <i className="fab fa-creative-commons"></i>,
-          country: "Austrailia",
-          checked: false,
-        },
-      ],
-    },
-    {
-      name: "W",
-      rating: 4,
-      groups: "Restaurants",
-      distance: 243,
-      category: "Rest",
-      img: img,
-      detail: [
-        {
-          icon: <i className="fab fa-creative-commons"></i>,
-          country: "Afghanistan",
-          checked: false,
-        },
-        {
-          icon: <i className="fab fa-creative-commons"></i>,
-          country: "Austria",
-          checked: false,
-        },
-        {
-          icon: <i className="fab fa-creative-commons"></i>,
-          country: "Albania",
-          checked: false,
-        },
-        {
-          icon: <i className="fab fa-creative-commons"></i>,
-          country: "Austrailia",
-          checked: false,
+          name: "ABC",
+          rating: 4.4,
+          groups: " Caltaro",
+          distance: 3,
+          category: " Vegan",
+          img: img,
+          detail: [
+            {
+              icon: <i className="fab fa-creative-commons"></i>,
+              country: "Afghanistan",
+              checked: false,
+            },
+            {
+              icon: <i className="fab fa-creative-commons"></i>,
+              country: "Austria",
+              checked: false,
+            },
+            {
+              icon: <i className="fab fa-creative-commons"></i>,
+              country: "Albania",
+              checked: false,
+            },
+            {
+              icon: <i className="fab fa-creative-commons"></i>,
+              country: "Austrailia",
+              checked: false,
+            },
+          ],
         },
       ],
     },
     {
-      name: "B",
-      rating: 4.4,
-      groups: "Restaurants, Caltaro",
-      distance: 43,
-      category: "Rest, Vegan",
-      img: img,
-      detail: [
+      section: "R",
+      places: [
         {
-          icon: <i className="fab fa-creative-commons"></i>,
-          country: "Afghanistan",
-          checked: false,
+          name: "RA",
+          rating: 4.4,
+          groups: "Restaurants, Caltaro",
+          distance: 24,
+          category: "Rest, Vegan",
+          img: img,
+          detail: [
+            {
+              icon: <i className="fab fa-creative-commons"></i>,
+              country: "Afghanistan",
+              checked: false,
+            },
+            {
+              icon: <i className="fab fa-creative-commons"></i>,
+              country: "Austria",
+              checked: false,
+            },
+            {
+              icon: <i className="fab fa-creative-commons"></i>,
+              country: "Albania",
+              checked: false,
+            },
+            {
+              icon: <i className="fab fa-creative-commons"></i>,
+              country: "Austrailia",
+              checked: false,
+            },
+          ],
         },
+      ],
+    },
+    {
+      section: "B",
+      places: [
         {
-          icon: <i className="fab fa-creative-commons"></i>,
-          country: "Austria",
-          checked: false,
-        },
-        {
-          icon: <i className="fab fa-creative-commons"></i>,
-          country: "Albania",
-          checked: false,
-        },
-        {
-          icon: <i className="fab fa-creative-commons"></i>,
-          country: "Austrailia",
-          checked: false,
+          name: "B",
+          rating: 4.4,
+          groups: "Restaurants, Caltaro",
+          distance: 43,
+          category: "Rest, Vegan",
+          img: img,
+          detail: [
+            {
+              icon: <i className="fab fa-creative-commons"></i>,
+              country: "Afghanistan",
+              checked: false,
+            },
+            {
+              icon: <i className="fab fa-creative-commons"></i>,
+              country: "Austria",
+              checked: false,
+            },
+            {
+              icon: <i className="fab fa-creative-commons"></i>,
+              country: "Albania",
+              checked: false,
+            },
+            {
+              icon: <i className="fab fa-creative-commons"></i>,
+              country: "Austrailia",
+              checked: false,
+            },
+          ],
         },
       ],
     },
   ],
+
+  // [
+  //   {
+  //     name: "RA",
+  //     rating: 4.4,
+  //     groups: "Restaurants, Caltaro",
+  //     distance: 24,
+  //     category: "Rest, Vegan",
+  //     img: img,
+  //     detail: [
+  //       {
+  //         icon: <i className="fab fa-creative-commons"></i>,
+  //         country: "Afghanistan",
+  //         checked: false,
+  //       },
+  //       {
+  //         icon: <i className="fab fa-creative-commons"></i>,
+  //         country: "Austria",
+  //         checked: false,
+  //       },
+  //       {
+  //         icon: <i className="fab fa-creative-commons"></i>,
+  //         country: "Albania",
+  //         checked: false,
+  //       },
+  //       {
+  //         icon: <i className="fab fa-creative-commons"></i>,
+  //         country: "Austrailia",
+  //         checked: false,
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     name: "AB",
+  //     rating: 4.4,
+  //     groups: "Restaurants, Caltaro",
+  //     distance: 4,
+  //     category: " Vegan",
+  //     img: img,
+  //     detail: [
+  //       {
+  //         icon: <i className="fab fa-creative-commons"></i>,
+  //         country: "Afghanistan",
+  //         checked: false,
+  //       },
+  //       {
+  //         icon: <i className="fab fa-creative-commons"></i>,
+  //         country: "Austria",
+  //         checked: false,
+  //       },
+  //       {
+  //         icon: <i className="fab fa-creative-commons"></i>,
+  //         country: "Albania",
+  //         checked: false,
+  //       },
+  //       {
+  //         icon: <i className="fab fa-creative-commons"></i>,
+  //         country: "Austrailia",
+  //         checked: false,
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     name: "W",
+  //     rating: 4,
+  //     groups: "Restaurants",
+  //     distance: 243,
+  //     category: "Rest",
+  //     img: img,
+  //     detail: [
+  //       {
+  //         icon: <i className="fab fa-creative-commons"></i>,
+  //         country: "Afghanistan",
+  //         checked: false,
+  //       },
+  //       {
+  //         icon: <i className="fab fa-creative-commons"></i>,
+  //         country: "Austria",
+  //         checked: false,
+  //       },
+  //       {
+  //         icon: <i className="fab fa-creative-commons"></i>,
+  //         country: "Albania",
+  //         checked: false,
+  //       },
+  //       {
+  //         icon: <i className="fab fa-creative-commons"></i>,
+  //         country: "Austrailia",
+  //         checked: false,
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     name: "B",
+  //     rating: 4.4,
+  //     groups: "Restaurants, Caltaro",
+  //     distance: 43,
+  //     category: "Rest, Vegan",
+  //     img: img,
+  //     detail: [
+  //       {
+  //         icon: <i className="fab fa-creative-commons"></i>,
+  //         country: "Afghanistan",
+  //         checked: false,
+  //       },
+  //       {
+  //         icon: <i className="fab fa-creative-commons"></i>,
+  //         country: "Austria",
+  //         checked: false,
+  //       },
+  //       {
+  //         icon: <i className="fab fa-creative-commons"></i>,
+  //         country: "Albania",
+  //         checked: false,
+  //       },
+  //       {
+  //         icon: <i className="fab fa-creative-commons"></i>,
+  //         country: "Austrailia",
+  //         checked: false,
+  //       },
+  //     ],
+  //   },
+  // ],
 
   reducers: {
     selectOne: (state, action) => {

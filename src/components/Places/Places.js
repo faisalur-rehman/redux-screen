@@ -7,20 +7,20 @@ import store from "../../store/store";
 const Places = () => {
   const [search, setSearch] = useState(false);
   const [searchedPlace, setSearchedPlace] = useState("");
-  const [places, setPlaces] = useState([]);
+  const [allPlaces, setPlaces] = useState([]);
   const [found, setFound] = useState();
   const [index, setIndex] = useState();
   const [sortBy, setSortBy] = useState("");
+  const [mainIndex, setmainIndex] = useState();
 
   useEffect(() => {
     setPlaces(store.getState());
     console.log("store", store.getState());
   }, []);
-  places.length > 0 && console.log("Places", places);
+  allPlaces.length > 0 && console.log("Places", allPlaces);
 
   function handleSortSubmit(sort) {
     setSortBy(sort);
-    // if (sort === "name") {
     let arr = store
       .getState()
       .slice()
@@ -28,7 +28,6 @@ const Places = () => {
         return a[sort] > b[sort] ? 1 : b[sort] > a[sort] ? -1 : 0;
       });
     setPlaces([...arr]);
-    // }
   }
   console.log("sort", sortBy);
 
@@ -40,15 +39,17 @@ const Places = () => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    let result = places.find(
-      (element) =>
-        element.name.toLowerCase() === searchedPlace.toLocaleLowerCase()
-    );
-    setFound(result);
-    for (let i = 0; i < places.length; i++) {
-      if (JSON.stringify(store.getState()[i]) === JSON.stringify(result)) {
-        console.log("i", i);
-        setIndex(i);
+    for (let i = 0; i < allPlaces.length; i++) {
+      for (let j = 0; j < allPlaces[i].places.length; j++) {
+        if (
+          allPlaces[i].places[j].name.toLowerCase() ===
+          searchedPlace.toLocaleLowerCase()
+        ) {
+          setFound(allPlaces[i].places[j]);
+          setIndex(j);
+          setmainIndex(i);
+          break;
+        }
       }
     }
   }
@@ -73,20 +74,23 @@ const Places = () => {
         </form>
       )}
       <div style={{ marginTop: 70 }}>
-        <p className="alpha-order">#</p>
         {!found
-          ? places.length > 0 &&
-            places.map((item, index) => (
-              <div key={index}>
-                <PlaceCard
-                  name={item.name}
-                  rating={item.rating}
-                  groups={item.groups}
-                  distance={item.distance}
-                  category={item.category}
-                  img={item.img}
-                  i={index}
-                />
+          ? allPlaces.length > 0 &&
+            allPlaces.map((item, ind) => (
+              <div key={ind}>
+                <p className="alpha-order">{item.section}</p>
+                {item.places.map((place, index) => (
+                  <PlaceCard
+                    name={place.name}
+                    rating={place.rating}
+                    groups={place.groups}
+                    distance={place.distance}
+                    category={place.category}
+                    img={place.img}
+                    i={index}
+                    mainIndex={ind}
+                  />
+                ))}
               </div>
             ))
           : found && (
@@ -98,6 +102,7 @@ const Places = () => {
                 category={found.category}
                 img={found.img}
                 i={index}
+                mainIndex={mainIndex}
               />
             )}
       </div>

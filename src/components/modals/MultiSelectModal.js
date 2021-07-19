@@ -45,20 +45,24 @@ const MultiSelectModal = (props) => {
               onClick={handleSelectAll}
             ></i>
           </div>
-          {store.getState()[props.index].detail.map((element, index) => (
-            <div className="country-card" key={index}>
-              <div className="country">
-                {element.icon}
-                <p>{element.country}</p>
-              </div>
-              <Form.Check
-                type="checkbox"
-                id="autoSizingCheck2"
-                checked={element.checked}
-                onChange={() => handleChange(index)}
-              />
-            </div>
-          ))}
+          {store
+            .getState()
+            [props.mainIndex].places[props.index].detail.map(
+              (element, index) => (
+                <div className="country-card" key={index}>
+                  <div className="country">
+                    {element.icon}
+                    <p>{element.country}</p>
+                  </div>
+                  <Form.Check
+                    type="checkbox"
+                    id="autoSizingCheck2"
+                    checked={element.checked}
+                    onChange={() => handleChange(index)}
+                  />
+                </div>
+              )
+            )}
         </Modal.Body>
       </Modal>
     </div>
