@@ -2,8 +2,8 @@
   display: flex;
   padding: 10px;
   box-shadow: 1px 0px 10px #888888;
-  width: 98%;
-  margin: 20px auto;
+  width: 95%;
+  margin: 10px auto;
   border-radius: 15px;
   cursor: pointer;
 }

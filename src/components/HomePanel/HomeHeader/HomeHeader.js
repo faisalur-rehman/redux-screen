@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./HomeHeader.css";
 import { Link } from "react-router-dom";
 import GuideInfo from "../../modals/GuideInfo";
+
 const HomeHeader = () => {
   const [guideInfoModal, setGuideInfoModal] = useState(false);
 

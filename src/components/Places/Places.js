@@ -21,9 +21,6 @@ const Places = () => {
     setPlaces([...arr]);
     console.log("store", store.getState());
   }, []);
-  // console.log("places", places);
-
-  // console.log("searchedPlace", index);
   places.length > 0 && console.log("Places", places);
   // console.log("found", found);
 
@@ -50,7 +47,7 @@ const Places = () => {
 
   return (
     <div className="places">
-      <div className="sticky-place-header">
+      <div className="sticky-header">
         <PlacesHeader setSearch={setSearch} />
       </div>
       {search && (
@@ -65,33 +62,35 @@ const Places = () => {
           <i className="fas fa-times" onClick={handleSearchCancel}></i>
         </form>
       )}
-      <p className="alpha-order">#</p>
-      {!found
-        ? places.length > 0 &&
-          places.map((item, index) => (
-            <div key={index}>
+      <div style={{ marginTop: 70 }}>
+        <p className="alpha-order">#</p>
+        {!found
+          ? places.length > 0 &&
+            places.map((item, index) => (
+              <div key={index}>
+                <PlaceCard
+                  name={item.name}
+                  rating={item.rating}
+                  groups={item.groups}
+                  distance={item.distance}
+                  category={item.category}
+                  img={item.img}
+                  i={index}
+                />
+              </div>
+            ))
+          : found && (
               <PlaceCard
-                name={item.name}
-                rating={item.rating}
-                groups={item.groups}
-                distance={item.distance}
-                category={item.category}
-                img={item.img}
+                name={found.name}
+                rating={found.rating}
+                groups={found.groups}
+                distance={found.distance}
+                category={found.category}
+                img={found.img}
                 i={index}
               />
-            </div>
-          ))
-        : found && (
-            <PlaceCard
-              name={found.name}
-              rating={found.rating}
-              groups={found.groups}
-              distance={found.distance}
-              category={found.category}
-              img={found.img}
-              i={index}
-            />
-          )}
+            )}
+      </div>
     </div>
   );
 };

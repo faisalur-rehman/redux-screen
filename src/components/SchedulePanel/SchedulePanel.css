@@ -1,0 +1,27 @@
+.schedule-card {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  box-shadow: 1px 0px 10px #888888;
+  width: 90%;
+  border-radius: 15px;
+  cursor: pointer;
+  padding: 15px;
+  margin: 10px auto;
+}
+.calendar-icon {
+  color: blue;
+  margin: 5px 15px;
+  font-size: 1.4rem;
+}
+.schedule p {
+  margin: 0;
+}
+.schedule-date {
+  color: blue;
+  font-size: 1.1rem;
+  margin: 8px 20px;
+}
+.all-schedules {
+  margin-top: 75px;
+}

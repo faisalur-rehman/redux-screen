@@ -1,0 +1,25 @@
+.schedule-header {
+  background-color: rgb(233, 233, 233);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-top: 16px;
+  /* width: 90%;
+  margin: auto; */
+}
+.schedule-header i {
+  color: blue;
+  font-size: 1.2rem;
+  margin: 5px;
+}
+.schedule-header input {
+  padding: 8px;
+  border-color: blue;
+  border-radius: 8px;
+}
+.schedule-header input:focus {
+  border-color: rgb(19, 145, 218) !important;
+  outline: blue;
+}

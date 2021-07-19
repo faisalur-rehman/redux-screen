@@ -2,41 +2,41 @@ import React, { useState } from "react";
 import "./PlaceCard.css";
 import PlaceModal from "../../modals/PlaceModal";
 
-const PlaceCard = ({ name, category, rating, groups, distance, img, i }) => {
+const PlaceCard = (props) => {
   const [placeModal, setPlaceModal] = useState(false);
 
   return (
     <>
       <div className="place-card" onClick={() => setPlaceModal(true)}>
         <div>
-          <img src={img} alt="" />
+          <img src={props.img} alt="" />
         </div>
         <div>
-          <h4>{name}</h4>
+          <h4>{props.name}</h4>
           <p>
             <span>Category: </span>
-            {category}
+            {props.category}
           </p>
           <p>
             <span>Groups: </span>
-            {groups}
+            {props.groups}
           </p>
           <p>
             <span>Ratings: </span>
-            {rating}
+            {props.rating}
           </p>
           <p>
             <span>Distance: </span>
-            {distance}
+            {props.distance}
           </p>
         </div>
       </div>
       <PlaceModal
         show={placeModal}
         onHide={() => setPlaceModal(false)}
-        name={name}
-        img={img}
-        i={i}
+        name={props.name}
+        img={props.img}
+        i={props.i}
       />
     </>
   );
