@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import "./SchedulePanel.css";
 import ScheduleHeader from "./Header/ScheduleHeader";
+import EventModal from "../modals/EventModal";
 let arr = [
   {
     date: "Saturday, December 5, 2021",
@@ -12,18 +13,30 @@ let arr = [
 ];
 
 const SchdedulePanel = (props) => {
+  const [eventModal, setEventModal] = useState(false);
   return (
     <>
-      <div style={{ display: "flex", flexDirection: "column", width: "20%" }}>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          width: "20%",
+          maxHeight: "100vh",
+          overflowY: "scroll",
+        }}
+      >
         <ScheduleHeader />
         <div className="all-schedules">
           {arr.map((_schedule, i) => (
             <div key={i}>
               <p className="schedule-date">{_schedule.date}</p>
               {_schedule.schedules.map((_) => (
-                <div className="schedule-card">
+                <div
+                  className="schedule-card"
+                  onClick={() => setEventModal(true)}
+                >
                   <div className="calendar-icon">
-                    <i class="far fa-calendar-alt"></i>
+                    <i className="far fa-calendar-alt"></i>
                   </div>
                   <div className="schedule">
                     <p>10:00-12:00</p>
@@ -35,6 +48,7 @@ const SchdedulePanel = (props) => {
           ))}
         </div>
       </div>
+      <EventModal show={eventModal} onHide={() => setEventModal(false)} />
     </>
   );
 };

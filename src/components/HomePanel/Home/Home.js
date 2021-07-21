@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useEffect } from "react";
 import HomeHeader from "../HomeHeader/HomeHeader";
 import "./Home.css";
 import ResizePanel from "react-resize-panel";
@@ -14,14 +14,14 @@ const Home = ({ setDisplayNone }) => {
     refreshRate: 1000,
     onResize,
   });
-  // useEffect(() => {
-  //   if (height > 150) {
-  //     setDisplayNone(true);
-  //   } else {
-  //     setDisplayNone(false);
-  //   }
-  //   // eslint-disable-next-line react-hooks/exhaustive-deps
-  // }, [height]);
+  useEffect(() => {
+    if (height > 550) {
+      setDisplayNone(true);
+    } else {
+      setDisplayNone(false);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [height]);
   console.log(height);
 
   return (

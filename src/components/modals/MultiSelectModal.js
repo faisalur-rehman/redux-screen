@@ -29,9 +29,7 @@ const MultiSelectModal = (props) => {
         centered
       >
         <Modal.Header closeButton>
-          <Modal.Title id="example-modal-sizes-title-sm">
-            Select Some
-          </Modal.Title>
+          <Modal.Title id="example-modal-sizes-title-sm"></Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <div className="search">

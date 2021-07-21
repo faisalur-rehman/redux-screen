@@ -21,7 +21,7 @@ const SortModal = (props) => {
         </Modal.Header>
         <Modal.Body>
           <div className="sort">
-            <p onClick={() => handleSort("section")}>Sort by Name</p>
+            <p onClick={() => handleSort("section")}>Sort by Section</p>
             <p onClick={() => handleSort("distance")}>Sort by Distance</p>
           </div>
         </Modal.Body>
