@@ -25,7 +25,9 @@ function App() {
           // <div className="schedule-panel none">
           //   <h1>Schedule Panel</h1>
           // </div>
-          <SchdedulePanel />
+          <div className="none">
+            <SchdedulePanel />
+          </div>
         )}
       </Provider>
       {/* <MySectionList /> */}

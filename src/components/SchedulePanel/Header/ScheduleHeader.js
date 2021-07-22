@@ -3,7 +3,7 @@ import "./ScheduleHeader.css";
 
 const ScheduleHeader = () => {
   return (
-    <div className="sticky-header">
+    <div className="sticky-header" style={{ marginLeft: 10, width: "15%" }}>
       <div className="schedule-header">
         <input type="text" placeholder="Search" />
         <i className="fas fa-plus-circle"></i>

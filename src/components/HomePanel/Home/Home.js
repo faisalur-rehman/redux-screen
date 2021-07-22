@@ -6,6 +6,7 @@ import HomeFooter from "../HomeFooter/HomeFooter";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Places from "../../Places/Places";
 import { useResizeDetector } from "react-resize-detector";
+import SchdedulePanel from "../../SchedulePanel/SchdedulePanel";
 
 const Home = ({ setDisplayNone }) => {
   const onResize = useCallback(() => {}, []);
@@ -41,6 +42,9 @@ const Home = ({ setDisplayNone }) => {
           </Route>
           <Route path="/places">
             <Places />
+          </Route>
+          <Route path="/schedule">
+            <SchdedulePanel />
           </Route>
         </Switch>
         <HomeFooter />

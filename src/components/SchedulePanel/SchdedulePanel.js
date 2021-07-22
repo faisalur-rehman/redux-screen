@@ -20,7 +20,7 @@ const SchdedulePanel = (props) => {
         style={{
           display: "flex",
           flexDirection: "column",
-          width: "20%",
+          // width: "20%",
           maxHeight: "100vh",
           overflowY: "scroll",
         }}

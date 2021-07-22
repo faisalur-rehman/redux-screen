@@ -31,6 +31,16 @@ const HomeFooter = () => {
           <p>Places</p>
         </div>
       </Link>
+      <Link to="/schedule">
+        <div
+          className="home-nav-item"
+          style={{ color: "#FCD702", verticalAlign: "middle" }}
+        >
+          <i className="far fa-calendar-alt"></i>
+
+          <p>Schedule</p>
+        </div>
+      </Link>
       <div
         className="home-nav-item "
         style={{ color: "lightblue", verticalAlign: "middle" }}

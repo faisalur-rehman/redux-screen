@@ -18,6 +18,7 @@
   padding: 8px;
   border-color: blue;
   border-radius: 8px;
+  width: 90%;
 }
 .schedule-header input:focus {
   border-color: rgb(19, 145, 218) !important;
