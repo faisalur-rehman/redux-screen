@@ -24,7 +24,7 @@ const MultiSelectModal = (props) => {
     setRerender(Math.random() * 100000);
     dispatch(selectOne({ id: props.index, checkedIndex: i, mainIndex }));
   }
-  console.log("ok", props.mainIndex, props.index);
+  console.log("ok", mainIndex);
   return (
     <div className="modal">
       <Modal
@@ -47,6 +47,7 @@ const MultiSelectModal = (props) => {
             ></i>
           </div>
           {mainIndex &&
+            store.getState()[mainIndex] &&
             store.getState()[mainIndex].places[props.index].detail.map(
               (element, index) =>
                 element.checked && (

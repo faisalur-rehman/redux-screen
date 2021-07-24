@@ -16,11 +16,11 @@ const Home = ({ setDisplayNone }) => {
     onResize,
   });
   useEffect(() => {
-    if (height > 550) {
-      setDisplayNone(true);
-    } else {
-      setDisplayNone(false);
-    }
+    // if (height > 550) {
+    //   setDisplayNone(true);
+    // } else {
+    //   setDisplayNone(false);
+    // }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [height]);
   console.log(height);
