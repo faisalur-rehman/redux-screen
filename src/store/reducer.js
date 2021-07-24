@@ -1,10 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
 import img from "../assets/images/img1.jpg";
 
+let id = 0;
+
 const slice1 = createSlice({
   name: "sections",
   initialState: [
     {
+      id: ++id,
       section: "A",
       places: [
         {
@@ -70,6 +73,7 @@ const slice1 = createSlice({
       ],
     },
     {
+      id: ++id,
       section: "R",
       places: [
         {
@@ -102,9 +106,40 @@ const slice1 = createSlice({
             },
           ],
         },
+        {
+          name: "RAC",
+          rating: 4.4,
+          groups: "Restaurants, Caltaro",
+          distance: 4,
+          category: "Rest, Vegan",
+          img: img,
+          detail: [
+            {
+              icon: <i className="fab fa-creative-commons"></i>,
+              country: "Afghanistan",
+              checked: true,
+            },
+            {
+              icon: <i className="fab fa-creative-commons"></i>,
+              country: "Austria",
+              checked: false,
+            },
+            {
+              icon: <i className="fab fa-creative-commons"></i>,
+              country: "Albania",
+              checked: true,
+            },
+            {
+              icon: <i className="fab fa-creative-commons"></i>,
+              country: "Austrailia",
+              checked: true,
+            },
+          ],
+        },
       ],
     },
     {
+      id: ++id,
       section: "B",
       places: [
         {

@@ -52,6 +52,7 @@ const PlaceModal = (props) => {
         name={props.name}
         index={props.i}
         mainIndex={props.mainIndex}
+        id={props.id}
       />
     </>
   );

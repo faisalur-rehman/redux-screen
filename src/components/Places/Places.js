@@ -10,7 +10,6 @@ const Places = () => {
   const [allPlaces, setPlaces] = useState([]);
   const [found, setFound] = useState();
   const [index, setIndex] = useState();
-  const [sortBy, setSortBy] = useState("");
   const [mainIndex, setmainIndex] = useState();
 
   useEffect(() => {
@@ -20,16 +19,27 @@ const Places = () => {
   allPlaces.length > 0 && console.log("Places", allPlaces);
 
   function handleSortSubmit(sort) {
-    setSortBy(sort);
-    let arr = store
-      .getState()
-      .slice()
-      .sort(function (a, b) {
-        return a[sort] > b[sort] ? 1 : b[sort] > a[sort] ? -1 : 0;
+    if (sort === "section") {
+      let arr = store
+        .getState()
+        .slice()
+        .sort(function (a, b) {
+          return a[sort] > b[sort] ? 1 : b[sort] > a[sort] ? -1 : 0;
+        });
+      setPlaces([...arr]);
+    } else {
+      let newArr = [];
+
+      store.getState().map((section) => {
+        let arr = section.places.slice().sort(function (a, b) {
+          return a[sort] > b[sort] ? 1 : b[sort] > a[sort] ? -1 : 0;
+        });
+        newArr.push({ section: section.section, places: arr });
+        return newArr;
       });
-    setPlaces([...arr]);
+      setPlaces([...newArr]);
+    }
   }
-  console.log("sort", sortBy);
 
   function handleSearchCancel() {
     setSearch(false);
@@ -89,6 +99,7 @@ const Places = () => {
                     img={place.img}
                     i={index}
                     mainIndex={ind}
+                    id={item.id}
                   />
                 ))}
               </div>

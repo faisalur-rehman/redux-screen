@@ -38,6 +38,7 @@ const PlaceCard = (props) => {
         img={props.img}
         i={props.i}
         mainIndex={props.mainIndex}
+        id={props.id}
       />
     </>
   );
