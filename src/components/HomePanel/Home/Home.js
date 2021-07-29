@@ -91,24 +91,24 @@ const Home = ({ setDisplayNone }) => {
     "      <div><b>Must See Places</b></div>" +
     '      <div class="scrollmenu"> <a href="maplink:%7C%7C%7CMustSee" style=""><button' +
     "" +
-    '            style="border: none;  padding:18px; margin:10px; width:150px; color:white; border-radius:20%; font-size:48px; background-color: #64DB65;">All</button></a>' +
-    '        <a href="maplink:%7C%7C%7CVisited%7CMustSee"><button style="border: none;  padding:18px; margin:10px; color:white; border-radius:20%; font-size:48px; background-color: #FEC02D;">Visited</button></a>' +
-    '        <a href="maplink:%7C%7C%7CNotVisited%7CMustSee"><button style="border: none;  padding:18px; margin:10px; color:white; border-radius:20%; font-size:48px; background-color: #36D1E5;">Not' +
+    '            style="border: none;  padding:18px; margin:10px; width:150px; color:white; border-radius:20%; font-size:30px; background-color: #64DB65;">All</button></a>' +
+    '        <a href="maplink:%7C%7C%7CVisited%7CMustSee"><button style="border: none;  padding:18px; margin:10px; color:white; border-radius:20%; font-size:30px; background-color: #FEC02D;">Visited</button></a>' +
+    '        <a href="maplink:%7C%7C%7CNotVisited%7CMustSee"><button style="border: none;  padding:18px; margin:10px; color:white; border-radius:20%; font-size:30px; background-color: #36D1E5;">Not' +
     "            Visited</button></a> </div>" +
     "      <b>Places</b>" +
-    '      <div class="scrollmenu"> <a href="maplink:%7C%7C%7CVisited"><button style="border: none;  padding:18px; margin:10px; color:white; border-radius:20%; font-size:48px; background-color: #64DB65;">Visited</button></a>' +
-    '        <a href="maplink:%7C%7C%7CFavorites"><button style="border: none;  padding:18px; margin:10px; color:white; border-radius:20%; font-size:48px; background-color: #FEC02D;">Favorites</button></a>' +
+    '      <div class="scrollmenu"> <a href="maplink:%7C%7C%7CVisited"><button style="border: none;  padding:18px; margin:10px; color:white; border-radius:20%; font-size:30px; background-color: #64DB65;">Visited</button></a>' +
+    '        <a href="maplink:%7C%7C%7CFavorites"><button style="border: none;  padding:18px; margin:10px; color:white; border-radius:20%; font-size:30px; background-color: #FEC02D;">Favorites</button></a>' +
     "      </div>" +
     "      <div><b>Full Day Tours</b></div>" +
     '      <div class="scrollmenu"> <a href="schedulelink:One%20Day%20Tour"><button' +
     "" +
-    '            class="button1" style="padding:10px; margin:10px; border-radius:10%; font-size:48px; ">One' +
+    '            class="button1" style="padding:10px; margin:10px; border-radius:10%; font-size:30px; ">One' +
     '            Day Tour</button></a> <a href="schedulelink:Two%20Day%20Tour"><button' +
     "" +
-    '            class="button1" style="padding:10px; margin:10px; border-radius:10%; font-size:48px; ">Two' +
+    '            class="button1" style="padding:10px; margin:10px; border-radius:10%; font-size:30px; ">Two' +
     '            Day Tour</button></a> <a href="schedulelink:Three%20Day%20Tour"><button' +
     "" +
-    '            class="button1" style="  padding:10px; margin:10px; border-radius:10%; font-size:48px; ">Three' +
+    '            class="button1" style="  padding:10px; margin:10px; border-radius:10%; font-size:30px; ">Three' +
     "            Day Tour</button></a> </div>" +
     "      <div><b>Walks, Biking, etc<br>" +
     "        </b></div>" +
