@@ -12,14 +12,14 @@ const HomeHeader = () => {
       <div
         style={{
           display: "flex",
-          width: "90%",
+          width: "80%",
           margin: "auto",
           justifyContent: "space-between",
           alignItems: "center",
         }}
       >
         <img
-          className="none"
+          className="side-none"
           src={logo}
           alt=""
           height="65px"
@@ -66,24 +66,10 @@ const HomeHeader = () => {
             <i className="fas fa-save"></i>
             <p>Save</p>
           </div>
-          <div
-            className="home-nav-item ticket-item"
-            style={{ color: "lightblue", verticalAlign: "middle" }}
-          >
-            <i className="fas fa-clipboard-list"></i>
-            <p>Ticket</p>
-          </div>
-          <div
-            className="home-nav-item"
-            style={{ color: "gray", verticalAlign: "middle" }}
-          >
-            <i className="fas fa-info-circle"></i>
-            <p>Info</p>
-          </div>
         </div>
-        <h3 className="none" style={{ color: "orange", marginLeft: 10 }}>
+        <h4 className="side-none" style={{ color: "orange", marginLeft: 5 }}>
           Andiamo
-        </h3>
+        </h4>
       </div>
       <GuideInfo
         show={guideInfoModal}

@@ -7,7 +7,7 @@ const ScheduleHeader = () => {
       <div className="schedule-header">
         <input type="text" placeholder="Search" />
         <i className="fas fa-plus-circle"></i>
-        <i className="fas fa-filter"></i>
+        {/* <i className="fas fa-filter"></i> */}
       </div>
     </div>
   );

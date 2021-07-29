@@ -178,12 +178,11 @@ const Home = ({ setDisplayNone }) => {
         <HomeHeader />
         <Switch>
           <Route exact path="/">
-            <ResizePanel direction="s">
-              <div className="home-panel" ref={ref}>
-                {/* <h1>Home Panel</h1> */}
-                {ReactHtmlParser(html)}
-              </div>
-            </ResizePanel>
+            <div className="home-panel" ref={ref}>
+              {ReactHtmlParser(html)}
+            </div>
+            {/* <ResizePanel direction="s">
+            </ResizePanel> */}
             <div className="map-panel none">
               <h1>Map Panel</h1>
             </div>

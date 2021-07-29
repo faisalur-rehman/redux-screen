@@ -11,5 +11,8 @@
   margin: 20px 30px;
   font-size: 1.7rem;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1400px) {
+  .places-header i {
+    margin: 20px 20px;
+  }
 }
