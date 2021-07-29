@@ -27,6 +27,14 @@
 }
 @media screen and (max-width: 968px) {
   .home-panel {
-    height: 100vh;
+    height: 80vh;
+  }
+  .sticky-header {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .sticky-header {
+    width: 90%;
   }
 }
