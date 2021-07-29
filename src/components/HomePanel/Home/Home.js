@@ -1,7 +1,6 @@
 import React, { useCallback, useEffect } from "react";
 import HomeHeader from "../HomeHeader/HomeHeader";
 import "./Home.css";
-import ResizePanel from "react-resize-panel";
 import HomeFooter from "../HomeFooter/HomeFooter";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Places from "../../Places/Places";
@@ -181,8 +180,6 @@ const Home = ({ setDisplayNone }) => {
             <div className="home-panel" ref={ref}>
               {ReactHtmlParser(html)}
             </div>
-            {/* <ResizePanel direction="s">
-            </ResizePanel> */}
             <div className="map-panel none">
               <h1>Map Panel</h1>
             </div>
