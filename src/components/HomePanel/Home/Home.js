@@ -167,7 +167,7 @@ const Home = ({ setDisplayNone }) => {
     '      <ol style="font-size:130%">' +
     "      </ol>" +
     "      <!---STYLESTART-->" +
-    '      <style type="text/css"> body { margin: 55px; background-color: #ffffff; color: black; } body, td { font:normal normal georgia, times new roman, verdana; } a {color: #1913AB; text-decoration: none !important;} a:visited {color: #661099;} a:active {color: red;}' +
+    '      <style type="text/css"> body { background-color: #ffffff; color: black; } body, td { font:normal normal georgia, times new roman, verdana; } a {color: #1913AB; text-decoration: none !important;} a:visited {color: #661099;} a:active {color: red;}' +
     "    a:hover {color: purple; background: #AFB; } .redtext {color: red;}</style><!---STYLEEND-->" +
     "  </body>";
 
