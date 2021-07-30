@@ -10,36 +10,36 @@ const slice1 = createSlice({
       id: ++id,
       section: "A",
       places: [
-        {
-          name: "AB",
-          rating: 4.4,
-          groups: "Restaurants, Caltaro",
-          distance: 4,
-          category: " Vegan",
-          img: img,
-          detail: [
-            {
-              icon: <i className="fab fa-creative-commons"></i>,
-              country: "Afghanistan",
-              checked: true,
-            },
-            {
-              icon: <i className="fab fa-creative-commons"></i>,
-              country: "Austria",
-              checked: true,
-            },
-            {
-              icon: <i className="fab fa-creative-commons"></i>,
-              country: "Albania",
-              checked: true,
-            },
-            {
-              icon: <i className="fab fa-creative-commons"></i>,
-              country: "Austrailia",
-              checked: false,
-            },
-          ],
-        },
+        // {
+        //   name: "AB",
+        //   rating: 4.4,
+        //   groups: "Restaurants, Caltaro",
+        //   distance: 4,
+        //   category: " Vegan",
+        //   img: img,
+        //   detail: [
+        //     {
+        //       icon: <i className="fab fa-creative-commons"></i>,
+        //       country: "Afghanistan",
+        //       checked: true,
+        //     },
+        //     {
+        //       icon: <i className="fab fa-creative-commons"></i>,
+        //       country: "Austria",
+        //       checked: true,
+        //     },
+        //     {
+        //       icon: <i className="fab fa-creative-commons"></i>,
+        //       country: "Albania",
+        //       checked: true,
+        //     },
+        //     {
+        //       icon: <i className="fab fa-creative-commons"></i>,
+        //       country: "Austrailia",
+        //       checked: false,
+        //     },
+        //   ],
+        // },
         {
           name: "ABC",
           rating: 4.4,
@@ -76,36 +76,36 @@ const slice1 = createSlice({
       id: ++id,
       section: "R",
       places: [
-        {
-          name: "RA",
-          rating: 4.4,
-          groups: "Restaurants, Caltaro",
-          distance: 24,
-          category: "Rest, Vegan",
-          img: img,
-          detail: [
-            {
-              icon: <i className="fab fa-creative-commons"></i>,
-              country: "Afghanistan",
-              checked: true,
-            },
-            {
-              icon: <i className="fab fa-creative-commons"></i>,
-              country: "Austria",
-              checked: false,
-            },
-            {
-              icon: <i className="fab fa-creative-commons"></i>,
-              country: "Albania",
-              checked: true,
-            },
-            {
-              icon: <i className="fab fa-creative-commons"></i>,
-              country: "Austrailia",
-              checked: true,
-            },
-          ],
-        },
+        // {
+        //   name: "RA",
+        //   rating: 4.4,
+        //   groups: "Restaurants, Caltaro",
+        //   distance: 24,
+        //   category: "Rest, Vegan",
+        //   img: img,
+        //   detail: [
+        //     {
+        //       icon: <i className="fab fa-creative-commons"></i>,
+        //       country: "Afghanistan",
+        //       checked: true,
+        //     },
+        //     {
+        //       icon: <i className="fab fa-creative-commons"></i>,
+        //       country: "Austria",
+        //       checked: false,
+        //     },
+        //     {
+        //       icon: <i className="fab fa-creative-commons"></i>,
+        //       country: "Albania",
+        //       checked: true,
+        //     },
+        //     {
+        //       icon: <i className="fab fa-creative-commons"></i>,
+        //       country: "Austrailia",
+        //       checked: true,
+        //     },
+        //   ],
+        // },
         {
           name: "RAC",
           rating: 4.4,

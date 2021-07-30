@@ -8,8 +8,8 @@ let arr = [
     schedules: [1, 2],
   },
   { date: "Sunday, December 6, 2021", schedules: [1, 2] },
-  { date: "Monday, December 7, 2021", schedules: [1, 2] },
-  { date: "Tuesday, December 8, 2021", schedules: [1, 2] },
+  // { date: "Monday, December 7, 2021", schedules: [1, 2] },
+  // { date: "Tuesday, December 8, 2021", schedules: [1, 2] },
 ];
 
 const SchdedulePanel = (props) => {
@@ -22,7 +22,7 @@ const SchdedulePanel = (props) => {
           flexDirection: "column",
           // width: "20%",
           maxHeight: "100vh",
-          overflowY: "scroll",
+          overflowY: "auto",
         }}
       >
         <ScheduleHeader />
